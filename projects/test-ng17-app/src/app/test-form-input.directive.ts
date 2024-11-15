@@ -32,7 +32,6 @@ export class TestFormInputDirective implements ControlValueAccessor, OnInit {
   @Input() size: any;
   @Input() required: any;
   @Input() type: any;
-  @Input() value: any;
   @Input() formControl!: FormControl;
 
   @Output() onInputChangeEvent = new EventEmitter<CustomEvent>();
@@ -40,16 +39,16 @@ export class TestFormInputDirective implements ControlValueAccessor, OnInit {
   onChange: any = () => {};
   onTouched: any = () => {};
 
-  private _inputValue: string = '';
+  private _value: string = '';
 
-  get inputValue() {
-    return this._inputValue;
+  get value() {
+    return this._value;
   }
 
-  set inputValue(value: string) {
-    if (value !== this._inputValue) {
-      this._inputValue = value;
-      this.onChange(this._inputValue);
+  set value(value: string) {
+    if (value !== this._value) {
+      this._value = value;
+      this.onChange(this._value);
       this.onTouched();
       this.elementRef.nativeElement.value = value;
     }
@@ -74,14 +73,14 @@ export class TestFormInputDirective implements ControlValueAccessor, OnInit {
     }
   }
 
-  @HostListener('inputChange', ['$event'])
+  @HostListener('inputChange', ['$event.detail.target.value'])
   listenForValueChange(value: string): void {
-    this.inputValue = value;
+    this.value = value;
   }
 
   writeValue(value: string): void {
     if (value) {
-      this.inputValue = value;
+      this.value = value;
     }
   }
 

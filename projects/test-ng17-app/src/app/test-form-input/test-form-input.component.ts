@@ -14,7 +14,6 @@ export class TestFormInputComponent {
   @Input() size: any;
   @Input() required: any;
   @Input() type: any;
-  @Input() value: any;
   @Input() formControl!: FormControl;
 
   @Output() onInputChangeEvent = new EventEmitter<CustomEvent>();
