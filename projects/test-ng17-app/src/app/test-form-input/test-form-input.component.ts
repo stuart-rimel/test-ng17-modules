@@ -9,6 +9,7 @@ import { FormControl } from '@angular/forms';
 export class TestFormInputComponent {
   @Input() ariaLabel: any;
   @Input() autoCapitalize: any;
+  @Input() disabled: any;
   @Input() placeholder: any;
   @Input() size: any;
   @Input() required: any;

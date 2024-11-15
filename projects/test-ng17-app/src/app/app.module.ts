@@ -8,6 +8,7 @@ import { ModusAngularComponentsModule } from '@trimble-cms/modus-wc-angular';
 import { TestFormComponent } from './test-form/test-form.component';
 import { TestFormInputComponent } from './test-form-input/test-form-input.component';
 import { TestFormTextareaComponent } from './test-form-textarea/test-form-textarea.component';
+import { TestFormInputDirective } from './test-form-input.directive';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { TestFormTextareaComponent } from './test-form-textarea/test-form-textar
     TestFormComponent,
     TestFormInputComponent,
     TestFormTextareaComponent,
+    TestFormInputDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, ModusAngularComponentsModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
