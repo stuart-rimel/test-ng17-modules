@@ -1,0 +1,14 @@
+<modus-wc-text-input
+  #input
+  [ariaLabel]="ariaLabel"
+  [autoCapitalize]="autoCapitalize"
+  [formControl]="formControl"
+  [placeholder]="placeholder"
+  [size]="size"
+  [required]="required"
+  [type]="type"
+  [value]="value"
+  (inputChange)="handleInputChange($event)"
+>
+  <ng-content></ng-content>
+</modus-wc-text-input>
