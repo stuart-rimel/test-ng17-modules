@@ -8,7 +8,7 @@ import { ModusAngularComponentsModule } from '@trimble-cms/modus-wc-angular';
 import { TestFormComponent } from './test-form/test-form.component';
 import { TestFormInputComponent } from './test-form-input/test-form-input.component';
 import { TestFormTextareaComponent } from './test-form-textarea/test-form-textarea.component';
-import { TestFormInputDirective } from './test-form-input.directive';
+import { TestFormInputDirective } from './test-form-input/test-form-input.directive';
 
 @NgModule({
   declarations: [
