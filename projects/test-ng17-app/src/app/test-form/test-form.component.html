@@ -1,8 +1,11 @@
 <div class="form-container">
-  <h3>Test Form</h3>
-  <app-test-form-input
-    ariaLabel="test form input"
-    placeholder="Enter name"
-    (onInputChangeEvent)="handleInputChange($event)"
-  />
+  <h3>Reactive Form Demo</h3>
+  <div class="input-name">
+    <label for="name">Name: </label>
+    <app-test-form-input
+      ariaLabel="test form input"
+      placeholder="Enter name"
+      (onInputChangeEvent)="handleInputChange($event)"
+    />
+  </div>
 </div>
