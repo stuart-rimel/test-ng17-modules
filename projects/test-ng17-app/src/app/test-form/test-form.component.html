@@ -3,9 +3,13 @@
   <div class="input-name">
     <label for="name">Name: </label>
     <app-test-form-input
+      id="name"
       ariaLabel="test form input"
       placeholder="Enter name"
+      type="text"
+      [formControl]="name"
       (onInputChangeEvent)="handleInputChange($event)"
     />
+    <p>FormControl Value: {{ name.value }}</p>
   </div>
 </div>

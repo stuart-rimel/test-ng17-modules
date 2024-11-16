@@ -69,7 +69,7 @@ export class TestFormInputDirective implements ControlValueAccessor, OnInit {
     modusWcTextInput.value = this.value;
 
     if (!this.formControl) {
-      this.formControl = new FormControl(null);
+      this.formControl = new FormControl('');
     }
   }
 

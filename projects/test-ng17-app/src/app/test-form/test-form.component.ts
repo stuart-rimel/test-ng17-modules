@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ModusWcTextInputCustomEvent } from '@trimble-cms/modus-wc';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-test-form',
@@ -7,6 +7,8 @@ import { ModusWcTextInputCustomEvent } from '@trimble-cms/modus-wc';
   styleUrl: './test-form.component.css',
 })
 export class TestFormComponent {
+  name = new FormControl('');
+
   handleInputChange($event: CustomEvent) {
     const value = $event.detail.target.value;
     console.log('input changed:', value);

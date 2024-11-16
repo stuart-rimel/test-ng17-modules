@@ -9,6 +9,7 @@ import { TestFormComponent } from './test-form/test-form.component';
 import { TestFormInputComponent } from './test-form-input/test-form-input.component';
 import { TestFormTextareaComponent } from './test-form-textarea/test-form-textarea.component';
 import { TestFormInputDirective } from './test-form-input/test-form-input.directive';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,12 @@ import { TestFormInputDirective } from './test-form-input/test-form-input.direct
     TestFormTextareaComponent,
     TestFormInputDirective,
   ],
-  imports: [BrowserModule, AppRoutingModule, ModusAngularComponentsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ModusAngularComponentsModule,
+    ReactiveFormsModule,
+  ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent],
