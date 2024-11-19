@@ -1,14 +1,19 @@
-<modus-wc-text-input
-  #input
-  [ariaLabel]="ariaLabel"
-  [autoCapitalize]="autoCapitalize"
-  [disabled]="disabled"
-  [formControl]="formControl"
-  [placeholder]="placeholder"
-  [size]="size"
-  [required]="required"
-  [type]="type"
-  (inputChange)="handleInputChange($event)"
->
-  <ng-content></ng-content>
-</modus-wc-text-input>
+<div>
+  <label for="name">Name: </label>
+  <modus-wc-text-input
+    #input
+    id="name"
+    [ariaLabel]="ariaLabel"
+    [autoCapitalize]="autoCapitalize"
+    [disabled]="disabled"
+    [formControl]="name"
+    [placeholder]="placeholder"
+    [size]="size"
+    [required]="required"
+    type="text"
+    (inputChange)="handleInputChange($event)"
+  >
+  </modus-wc-text-input>
+  <p>You entered: {{ name.value }}</p>
+  <modus-wc-button (click)="updateName()" label="Update Name" size="sm" />
+</div>

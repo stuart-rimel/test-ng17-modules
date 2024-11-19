@@ -13,10 +13,14 @@ export class TestFormInputComponent {
   @Input() placeholder: any;
   @Input() size: any;
   @Input() required: any;
-  @Input() type: any;
-  @Input() formControl!: FormControl;
 
   @Output() onInputChangeEvent = new EventEmitter<CustomEvent>();
+
+  name = new FormControl('');
+
+  updateName() {
+    this.name.setValue('Nancy');
+  }
 
   handleInputChange($event: CustomEvent) {
     this.onInputChangeEvent.emit($event);

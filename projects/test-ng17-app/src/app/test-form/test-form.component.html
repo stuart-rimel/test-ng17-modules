@@ -1,15 +1,5 @@
 <div class="form-container">
   <h3>Reactive Form Demo</h3>
-  <div class="input-name">
-    <label for="name">Name: </label>
-    <app-test-form-input
-      id="name"
-      ariaLabel="test form input"
-      placeholder="Enter name"
-      type="text"
-      [formControl]="name"
-      (onInputChangeEvent)="handleInputChange($event)"
-    />
-    <p>FormControl Value: {{ name.value }}</p>
-  </div>
+  <app-test-form-input placeholder="Enter name" />
+  <app-test-form-textarea />
 </div>

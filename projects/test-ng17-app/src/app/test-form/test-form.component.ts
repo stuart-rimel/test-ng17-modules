@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+// import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-test-form',
@@ -7,10 +7,9 @@ import { FormControl } from '@angular/forms';
   styleUrl: './test-form.component.css',
 })
 export class TestFormComponent {
-  name = new FormControl('');
-
-  handleInputChange($event: CustomEvent) {
-    const value = $event.detail.target.value;
-    console.log('input changed:', value);
-  }
+  // name = new FormControl('');
+  // handleInputChange($event: CustomEvent) {
+  //   const value = $event.detail.target.value;
+  //   console.log('input changed:', value);
+  // }
 }

@@ -1,1 +1,15 @@
-<p>test-form-textarea works!</p>
+<div>
+  <label for="description">Description: </label>
+  <modus-wc-textarea
+    id="description"
+    ariaLabel="description text input"
+    placeholder="Enter description"
+    [formControl]="description"
+  />
+  <p>You entered: {{ description.value }}</p>
+  <modus-wc-button
+    label="Update Description"
+    size="sm"
+    (click)="updateDescription()"
+  />
+</div>
