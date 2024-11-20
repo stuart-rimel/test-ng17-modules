@@ -1,9 +1,3 @@
-<!-- <div class="form-container">
-  <h3>Reactive Form Demo</h3>
-  <app-test-form-input placeholder="Enter name" />
-  <app-test-form-textarea placeholder="Enter description" />
-</div> -->
-
 <div class="form-container">
   <h1>Reactive Form Demo</h1>
   <form [formGroup]="testForm" (ngSubmit)="onSubmit()">
@@ -27,8 +21,9 @@
     </div>
     <modus-wc-button type="submit" ariaLabel="submit button" label="Submit" />
   </form>
-  <p *ngIf="testForm.value.name && testForm.value.description">
-    Name: {{ testForm.value.name }}, Description:
-    {{ testForm.value.description }}
+  <p>Entered Data</p>
+  <p *ngIf="testForm.value.name">Name: {{ testForm.value.name }}</p>
+  <p *ngIf="testForm.value.description">
+    Description: {{ testForm.value.description }}
   </p>
 </div>
