@@ -1,15 +1,19 @@
 import { Component } from '@angular/core';
-// import { FormControl } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-test-form',
   templateUrl: './test-form.component.html',
   styleUrl: './test-form.component.css',
+  standalone: false,
 })
 export class TestFormComponent {
-  // name = new FormControl('');
-  // handleInputChange($event: CustomEvent) {
-  //   const value = $event.detail.target.value;
-  //   console.log('input changed:', value);
-  // }
+  testForm = new FormGroup({
+    name: new FormControl(''),
+    description: new FormControl(''),
+  });
+
+  onSubmit() {
+    console.warn(this.testForm.value);
+  }
 }
