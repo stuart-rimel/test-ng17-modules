@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
@@ -13,7 +13,10 @@ export class TestFormComponent {
     description: new FormControl(''),
   });
 
+  @Output() onDataSubmit = new EventEmitter();
+
   onSubmit() {
     console.warn(this.testForm.value);
+    alert(`Form submitted \n ${JSON.stringify(this.testForm.value)}`);
   }
 }
