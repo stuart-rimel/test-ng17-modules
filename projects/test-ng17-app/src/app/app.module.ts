@@ -10,6 +10,7 @@ import { TestFormInputComponent } from './test-form-input/test-form-input.compon
 import { TestFormTextareaComponent } from './test-form-textarea/test-form-textarea.component';
 import { TestFormInputDirective } from './test-form-input/test-form-input.directive';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TestFormTextareaDirective } from './test-form-textarea/test-form-textarea.directive';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     TestFormInputComponent,
     TestFormTextareaComponent,
     TestFormInputDirective,
+    TestFormTextareaDirective,
   ],
   imports: [
     BrowserModule,

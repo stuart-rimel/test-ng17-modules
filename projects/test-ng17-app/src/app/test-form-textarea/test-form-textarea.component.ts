@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 @Component({
@@ -7,9 +7,20 @@ import { FormControl } from '@angular/forms';
   styleUrl: './test-form-textarea.component.css',
 })
 export class TestFormTextareaComponent {
+  @Input() ariaLabel: any;
+  @Input() disabled: any;
+  @Input() placeholder: any;
+  @Input() required: any;
+
+  @Output() onTextareaChange = new EventEmitter<CustomEvent>();
+
   description = new FormControl('');
 
+  handleTextareaChange($event: CustomEvent) {
+    this.onTextareaChange.emit($event);
+  }
+
   updateDescription() {
-    this.description.setValue('This is a description.');
+    this.description.setValue('Nancy');
   }
 }

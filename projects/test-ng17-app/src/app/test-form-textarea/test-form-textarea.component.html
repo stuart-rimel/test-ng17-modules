@@ -2,9 +2,12 @@
   <label for="description">Description: </label>
   <modus-wc-textarea
     id="description"
-    ariaLabel="description text input"
-    placeholder="Enter description"
+    [ariaLabel]="ariaLabel"
+    [disabled]="disabled"
     [formControl]="description"
+    [placeholder]="placeholder"
+    [required]="required"
+    (textareaChange)="handleTextareaChange($event)"
   />
   <p>You entered: {{ description.value }}</p>
   <modus-wc-button
