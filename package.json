@@ -18,8 +18,8 @@
     "@angular/platform-browser": "^17.3.0",
     "@angular/platform-browser-dynamic": "^17.3.0",
     "@angular/router": "^17.3.0",
-    "@trimble-cms/modus-wc": "file:trimble-cms-modus-wc-0.0.1.tgz",
-    "@trimble-cms/modus-wc-angular": "file:trimble-cms-modus-wc-angular-0.0.1-ng17.tgz",
+    "@trimble-oss/moduswebcomponents": "^0.0.0-beta.3",
+    "@trimble-oss/moduswebcomponents-angular": "^0.0.0-beta.3-ng17",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"

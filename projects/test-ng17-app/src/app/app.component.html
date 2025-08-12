@@ -13,7 +13,27 @@
         ariaLabel="Avatar"
       ></modus-wc-avatar>
     </div>
-    <br />
+    <div>
+      <modus-wc-button (buttonClick)="openModal()">
+        Open modal
+      </modus-wc-button>
+      <modus-wc-modal
+        aria-label="Example modal"
+        custom-class=""
+        fullscreen="false"
+        modal-id="my_modal_1ulsp"
+        backdrop="default"
+        position="center"
+        show-close="true"
+        show-fullscreen-toggle="false"
+      >
+        <span slot="header">Modal Title</span>
+        <span slot="content"> This is sample modal content. </span>
+        <modus-wc-button (buttonClick)="closeModal()" slot="footer">
+          Close
+        </modus-wc-button>
+      </modus-wc-modal>
+    </div>
     <br />
     <app-test-form />
     <br />

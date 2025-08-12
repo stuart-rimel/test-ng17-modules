@@ -7,8 +7,8 @@
     [formControl]="description"
     [placeholder]="placeholder"
     [required]="required"
-    (textareaChange)="handleTextareaChange($event)"
-  />
+  ></modus-wc-textarea>
+
   <p>You entered: {{ description.value }}</p>
   <modus-wc-button
     label="Update Description"
